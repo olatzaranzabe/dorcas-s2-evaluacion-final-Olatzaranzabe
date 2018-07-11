@@ -15,20 +15,22 @@ function  showFilm(){
       // creando li's
         newFilm = document.createElement('li');
         newFilm.classList.add('listElement');
-      // metiendo li's en la ul
+        // metiendo li's en la ul
         filmsList.appendChild(newFilm);
 
         var ourFilmImage = json[i].show.image.medium;
         var ourFilmName = json[i].show.name;
         console.log(json[i].show.name);
 
-      // creando etiqueta img
+        // creando etiqueta img
         var image= document.createElement('img');
         newFilm.appendChild(image);
         image.setAttribute('src', ourFilmImage);
-      // creando etiqueta h2
-      var filmTitle = document.createElement('h2');
-      // newFilm.appendChild(filmTile);
+        // creando etiqueta h2
+        var filmTitle = document.createElement('h2');
+        newFilm.appendChild(filmTitle);
+        filmTitle.innerHTML = ourFilmName;
+
         // newFilm.append(ourNewFilm);
       // metiendo image and name en cada li
     }
