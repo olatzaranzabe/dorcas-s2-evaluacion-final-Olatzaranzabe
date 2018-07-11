@@ -1,6 +1,18 @@
-.colouring {
+.search-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: hotPink;
-  border: 10px solid orange;
+  width: 200px;
+  height: 40px;
+}
+
+.films-list {
+  display: grid;
+}
+
+.listElement {
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=main.css.map */
