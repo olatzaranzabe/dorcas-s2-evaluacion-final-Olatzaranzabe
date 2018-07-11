@@ -6,6 +6,7 @@ var newFilm;
 
 var filmsList = document.querySelector('.films-list');
 function  showFilm(){
+  filmsList.innerHTML='';
   fetch('http://api.tvmaze.com/search/shows?q=' +filmName.value)
     .then(function(response){
       return response.json();
@@ -18,7 +19,13 @@ function  showFilm(){
         // metiendo li's en la ul
         filmsList.appendChild(newFilm);
 
-        var ourFilmImage = json[i].show.image.medium;
+        var ourFilmImage = json[i].show.image;
+        console.log(json[i].show.image);
+        if(ourFilmImage!==null){
+          ourFilmImage = json[i].show.image.medium;
+        } else {
+          ourFilmImage = 'https://via.placeholder.com/210x295/cccccc/666666/?text=TV'
+        }
         var ourFilmName = json[i].show.name;
         console.log(json[i].show.name);
 
@@ -33,7 +40,7 @@ function  showFilm(){
 
         // newFilm.append(ourNewFilm);
       // metiendo image and name en cada li
-    }
+      }
     });
 }
 
