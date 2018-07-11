@@ -17,15 +17,9 @@ function  showFilm(){
         newFilm = document.createElement('li');
         newFilm.classList.add('listElement');
 
-        // favoriteando
+        // favoriteando (des/seleccion)
         newFilm.addEventListener('click', paintColor);
 
-        function paintColor(e){
-          var selectedFilm = e.currentTarget;
-          console.log(e.currentTarget);
-          selectedFilm.classList.add('colouring');
-
-        }
         // metiendo li's en la ul
         filmsList.appendChild(newFilm);
 
@@ -52,6 +46,15 @@ function  showFilm(){
       // metiendo image and name en cada li
       }
     });
+}
+
+function paintColor(e) {
+var selectedFilm = e.currentTarget;
+  if (selectedFilm.classList.contains('colouring')===true){
+    selectedFilm.classList.remove('colouring');
+  } else{
+    selectedFilm.classList.add('colouring');
+  }
 }
 
 searchButton.addEventListener('click', showFilm);
