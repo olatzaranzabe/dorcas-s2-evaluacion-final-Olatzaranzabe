@@ -16,6 +16,16 @@ function  showFilm(){
       // creando li's
         newFilm = document.createElement('li');
         newFilm.classList.add('listElement');
+
+        // favoriteando
+        newFilm.addEventListener('click', paintColor);
+
+        function paintColor(e){
+          var selectedFilm = e.currentTarget;
+          console.log(e.currentTarget);
+          selectedFilm.classList.add('colouring');
+
+        }
         // metiendo li's en la ul
         filmsList.appendChild(newFilm);
 
@@ -44,4 +54,4 @@ function  showFilm(){
     });
 }
 
-  searchButton.addEventListener('click', showFilm);
+searchButton.addEventListener('click', showFilm);
