@@ -1,18 +1,80 @@
-.search-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: hotPink;
-  width: 200px;
-  height: 40px;
+* {
+  background-color: #fcecfc;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .films-list {
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+}
+
+.colouring {
+  border: #d70013 solid 5px;
+  background-color: #dc879b;
 }
 
 .listElement {
   list-style-type: none;
+  padding: 10px;
+}
+
+.film-name {
+  border: #7e0000 solid 2px;
+  color: #7e0000;
+  font-size: 18px;
+  background-color: white;
+  width: 196px;
+  height: 34px;
+}
+
+.search-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #dc879b;
+  color: #7e0000;
+  font-size: 18px;
+  border: #7e0000 solid 2px;
+  width: 200px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.title {
+  color: #7e0000;
+  text-align: center;
+}
+
+.filmTitle {
+  color: #7e0000;
+  text-align: center;
+  background-color: transparent;
+}
+
+@media all and (min-width: 768px) {
+  .films-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

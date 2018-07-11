@@ -7,7 +7,7 @@ var newFilm;
 var filmsList = document.querySelector('.films-list');
 function  showFilm(){
   filmsList.innerHTML='';
-  fetch('http://api.tvmaze.com/search/shows?q=' +filmName.value)
+  fetch ('http://api.tvmaze.com/search/shows?q=' +filmName.value)
     .then(function(response){
       return response.json();
     })
@@ -24,14 +24,12 @@ function  showFilm(){
         filmsList.appendChild(newFilm);
 
         var ourFilmImage = json[i].show.image;
-        console.log(json[i].show.image);
         if(ourFilmImage!==null){
           ourFilmImage = json[i].show.image.medium;
         } else {
           ourFilmImage = 'https://via.placeholder.com/210x295/cccccc/666666/?text=TV'
         }
         var ourFilmName = json[i].show.name;
-        console.log(json[i].show.name);
 
         // creando etiqueta img
         var image= document.createElement('img');
@@ -39,17 +37,18 @@ function  showFilm(){
         image.setAttribute('src', ourFilmImage);
         // creando etiqueta h2
         var filmTitle = document.createElement('h2');
+        filmTitle.classList.add('filmTitle');
         newFilm.appendChild(filmTitle);
         filmTitle.innerHTML = ourFilmName;
 
         // newFilm.append(ourNewFilm);
-      // metiendo image and name en cada li
+        // metiendo image and name en cada li
       }
     });
 }
 
 function paintColor(e) {
-var selectedFilm = e.currentTarget;
+  var selectedFilm = e.currentTarget;
   if (selectedFilm.classList.contains('colouring')===true){
     selectedFilm.classList.remove('colouring');
   } else{
