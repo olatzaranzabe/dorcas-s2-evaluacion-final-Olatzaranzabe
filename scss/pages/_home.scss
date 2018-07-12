@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-  width: fit-content;
+  // width: fit-content;
   max-width: 100vh;
   margin: auto;
   display: flex;
@@ -17,26 +17,10 @@
 }
 
 .films-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 0;
-}
-
-@media all and (min-width: 768px) {
-  .films-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
-  }
-}
-
-@media all and (min-width: 1240px) {
-  .films-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 5px;
 }
 
 .colouring {
