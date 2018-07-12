@@ -41,20 +41,23 @@ function  showFilm(){
         filmTitle.classList.add('filmTitle');
         newFilm.appendChild(filmTitle);
         filmTitle.innerHTML = ourFilmName;
-
-        // newFilm.append(ourNewFilm);
-        // metiendo image and name en cada li
       }
     });
 }
 
 function paintColor(e) {
   var selectedFilm = e.currentTarget;
+  console.dir(selectedFilm);
   if (selectedFilm.classList.contains('colouring')===true){
     selectedFilm.classList.remove('colouring');
   } else{
     selectedFilm.classList.add('colouring');
   }
+  var arrayFavourites = [];
+  console.log(arrayFavourites);
+  for (var i = 0; i < selectedFilm.textContent.length; i++) {
+    console.log(arrayFavourites);
+    arrayFavourites.push(selectedFilm.textContent);
+  }
 }
-
 searchButton.addEventListener('click', showFilm);

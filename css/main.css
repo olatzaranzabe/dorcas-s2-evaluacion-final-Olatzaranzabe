@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-  max-width: 100vh;
+  max-width: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,6 +29,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 5px;
+  width: 100%;
 }
 
 .colouring {
@@ -67,6 +68,7 @@
   width: 200px;
   height: 40px;
   margin-left: 5px;
+  border-radius: 10px;
 }
 
 .title {
@@ -79,6 +81,18 @@
   text-align: center;
   background-color: transparent;
   height: 30px;
+}
+
+@media all and (min-width: 768px) {
+  .films-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .films-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
