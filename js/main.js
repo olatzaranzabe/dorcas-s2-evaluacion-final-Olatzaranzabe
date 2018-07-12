@@ -33,6 +33,7 @@ function  showFilm(){
 
         // creando etiqueta img
         var image= document.createElement('img');
+        image.classList.add('filmCover');
         newFilm.appendChild(image);
         image.setAttribute('src', ourFilmImage);
         // creando etiqueta h2

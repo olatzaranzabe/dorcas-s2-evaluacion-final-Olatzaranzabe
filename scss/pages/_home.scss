@@ -3,6 +3,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.wrapper {
+  width: fit-content;
+  max-width: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .container-search {
   display: flex;
   justify-content: center;
@@ -19,7 +27,15 @@
   .films-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
+  }
+}
+
+@media all and (min-width: 1240px) {
+  .films-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
   }
 }
 
@@ -31,6 +47,12 @@
 .listElement {
   list-style-type: none;
   padding: 10px;
+  margin: 10px;
+}
+
+.filmCover {
+  display: block;
+  margin: auto;
 }
 
 .film-name {
