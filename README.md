@@ -1,5 +1,5 @@
 ![Adalab](images/logo-adalab-80px.png)
-# Adalab web starter kit
+# Sprint 2: Evaluación final de Olatz Aranzabe
 Ahoy! Esta es nuestro Starter Kit en node/gulp para este primer contacto con el desarrollo web
 Incluye SCSS y un web server.
 
