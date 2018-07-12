@@ -27,7 +27,7 @@ function  showFilm(){
         if(ourFilmImage!==null){
           ourFilmImage = json[i].show.image.medium;
         } else {
-          ourFilmImage = 'https://via.placeholder.com/210x295/cccccc/666666/?text=TV'
+          ourFilmImage = 'https://via.placeholder.com/210x295/cccccc/666666/?text=TV';
         }
         var ourFilmName = json[i].show.name;
 
@@ -47,10 +47,17 @@ function  showFilm(){
 
 function paintColor(e) {
   var selectedFilm = e.currentTarget;
+  console.dir(selectedFilm);
   if (selectedFilm.classList.contains('colouring')===true){
     selectedFilm.classList.remove('colouring');
   } else{
     selectedFilm.classList.add('colouring');
+  }
+  var arrayFavourites = [];
+  console.log(arrayFavourites);
+  for (var i = 0; i < selectedFilm.textContent.length; i++) {
+    console.log(arrayFavourites);
+    arrayFavourites.push(selectedFilm.textContent);
   }
 }
 searchButton.addEventListener('click', showFilm);
