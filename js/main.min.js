@@ -47,7 +47,6 @@ function  showFilm(){
 
 function paintColor(e) {
   var selectedFilm = e.currentTarget;
-  console.dir(selectedFilm);
   if (selectedFilm.classList.contains('colouring')===true){
     selectedFilm.classList.remove('colouring');
   } else{
