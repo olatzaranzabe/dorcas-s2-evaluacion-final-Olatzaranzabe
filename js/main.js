@@ -53,11 +53,5 @@ function paintColor(e) {
   } else{
     selectedFilm.classList.add('colouring');
   }
-  var arrayFavourites = [];
-  console.log(arrayFavourites);
-  for (var i = 0; i < selectedFilm.textContent.length; i++) {
-    console.log(arrayFavourites);
-    arrayFavourites.push(selectedFilm.textContent);
-  }
 }
 searchButton.addEventListener('click', showFilm);
